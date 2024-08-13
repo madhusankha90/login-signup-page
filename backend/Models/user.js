@@ -1,20 +1,19 @@
-const { string, required } = require('joi');
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-    name: {
-        type: string,
+    userName: {
+        type: String,
         required: true
     },
     email: {
-        type: string,
+        type: String,
         required: true,
         unique: true
     },
     password: {
-        type: string,
+        type: String,
         required: true
     }
 })

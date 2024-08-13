@@ -1,12 +1,9 @@
 const express = require('express');
+const { login,signup } = require('../Controllers/AuthControllers');
 const router = express.Router();
 
-router.post('/login', (req,res)=>{
-    res.send('Login Success')
-});
-router.post('/signup', (req,res)=>{
-    res.send('SignUp Success')
-});
+router.post('/login',login)
+router.post('/signup',signup)
 
 
 
